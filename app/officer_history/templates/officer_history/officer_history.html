@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Officer History</title>
+</head>
+<body>
+<div>
+    <h1>Use of Force Incidents for Officer #{{ serial }}</h1>
+    {% for incident in incidents %}
+    <p>{{ incident.occured_date_time }}:
+       {{ incident.incident_type }}
+       ({{ incident.subject_race }}, {{incident.subject_gender}})</p>
+    {% endfor %}
+</div>
+</body>
+</html>
