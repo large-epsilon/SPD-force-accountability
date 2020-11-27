@@ -1,9 +1,10 @@
 <html>
 <head>
+<link rel="stylesheet" href="https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
 <title>Officer History</title>
 </head>
 <body>
-<div>
+<div class="paper container margin-top">
     <h1>Use of Force Incidents for Officer #{{ serial }}</h1>
     {% for incident in incidents %}
     <p>{{ incident.occured_date_time }}:

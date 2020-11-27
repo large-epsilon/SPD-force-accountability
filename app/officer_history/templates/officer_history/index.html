@@ -1,41 +1,35 @@
+<!DOCTYPE html>
 <html>
 <head>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.6.0">
+<link rel="stylesheet" href=
+"https://unpkg.com/papercss@1.8.2/dist/paper.min.css">
 <title>SPD Use of Force</title>
-<style>
-body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0px;
-}
-
-#main {
-    border: 1px solid black;
-}
-
-#main-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin: 15px;
-}
-
-#main-form > * {
-    margin: 3px;
-}
-
-</style>
 </head>
 <body>
-<div id="main">
-<form id="main-form" action="/officer_history" method="GET">
-<label for="serial_num">Officer's serial number:</label>
-<input type="text" name="serial_num"></input>
-<input type="submit" value="Get report"></input>
-</form>
+<div class="paper container margin-top">
+    <div class="col flex-center">
+        <div class="row flex-center">
+            <h1>SPD Use of Force History</h1>
+            <div class="row flex-center">
+                <a class="paper-btn margin">About</a>
+                <a class="paper-btn margin" href="https://www.seattle.gov/police/information-and-data/use-of-force-data/use-of-force-dashboard">City Data</a>
+                <a class="paper-btn margin" href="https://github.com/large-epsilon/SPD-force-accountability">Code</a>
+            </div>
+        </div>
+        <div class="row margin flex-spaces child-borders">
+            <form class="padding" action="/officer_history" method="get">
+                <div class="form-group margin-top">
+                    <label for="serial_num">Officer's serial number:</label>
+                    <input type="text" name="serial_num">
+                </div>
+                <div class="row flex-center">
+                    <input type="submit" value="Get report">
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 </body>
 </html>
