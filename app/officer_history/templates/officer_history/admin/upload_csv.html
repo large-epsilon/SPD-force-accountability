@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<div>
+<h1>Bulk Data Upload</h1>
+<p>Use this form to upload Seattle's open data on police use of force from
+https://data.seattle.gov/Public-Safety/Use-Of-Force/ppi5-g2bj</p>
+<p>Use the export button to download the form as a CSV, then copy/paste it 
+here. Be sure not to include the first row which contains the column names.</p>
+<p>This operation may take a few minutes to complete.</p>
+</div>
+<br>
+<form action="" method="POST">{% csrf_token %}
+<label for="csv">CSV data:</label><br>
+<textarea id="csv" name="csv" rows=20 cols=80></textarea><br>
+<input type="submit" value="upload">
+</form>
+{% endblock %}
